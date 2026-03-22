@@ -259,3 +259,81 @@ h4 {
 .app_img {
     width: 250px;
 }
+
+
+#Contactanos {
+    background-color: #081121;
+    padding: 100px;
+}
+
+
+.contact {
+    color: #F1F5F9;
+    margin-left: 15px;
+}
+
+.Formulario {
+    background-color: #0019f6;
+    display: block;
+    padding: 30px;
+    border-radius: 10px;
+    width: 500px;
+    margin-left: 800px;
+    margin-bottom: 50px;
+    margin-top: -400px;
+    /* Ajusta este valor para subirlo más o menos */
+}
+
+.Formulario form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 500px;
+}
+
+
+input {
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid #0019f6;
+    width: 100px
+}
+
+.fila-inputs {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+}
+
+.grupo-input {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+h5 {
+    color: #F1F5F9;
+}
+
+#Email {
+    color: #90A1B9;
+}
+
+#Telefono {
+    color: #90A1B9;
+}
+
+#Oficina {
+    color: #90A1B9;
+}
+
+
+footer {
+    background-color: #02021a;
+    padding: 100px;
+}
+
+p {
+    color: #90A1B9;
+}
