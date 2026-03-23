@@ -1,7 +1,13 @@
+html{
+    scroll-behavior: smooth;
+}
+
+
 body {
     margin: 0;
     padding: 0;
-    font-family: inter;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 
+    'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 header {
@@ -12,6 +18,7 @@ header {
 h2 {
     margin-left: 15px;
     color: #F1F5F9;
+    font-size: 20px;
 }
 
 nav {
@@ -20,6 +27,9 @@ nav {
     justify-content: space-between;
 }
 
+.logo{
+    font-size: 30px;
+}
 .menu_navegacion {
     display: flex;
 
@@ -34,6 +44,7 @@ ul {
 li {
     list-style: none;
     font-weight: 600;
+    font-size: 20px;
 }
 
 a {
@@ -55,13 +66,9 @@ a:hover {
 .hero_title {
     text-align: center;
     color: #F1F5F9;
-    font-size: 80px;
+    font-size: 110px;
 }
 
-.p_hero {
-    text-align: center;
-    color: #90A1B9;
-}
 
 .color_text {
     background: linear-gradient(90deg, #6A65FF, #D076FF);
@@ -70,10 +77,17 @@ a:hover {
     color: transparent;
 }
 
+.p_hero {
+    text-align: center;
+    color: #90A1B9;
+    font-size: 30px;
+}
+
 .buttons {
     display: flex;
     justify-content: center;
     gap: 20px;
+    padding: 20px;
 }
 
 .proyecto {
@@ -83,6 +97,8 @@ a:hover {
     border-color: #4f46e5;
     color: #F1F5F9;
     font-weight: 500;
+    padding: 25px;
+    font-size: 18px;
 }
 
 .trabajo {
@@ -91,6 +107,8 @@ a:hover {
     background-color: #101828;
     border-color: #F1F5F9;
     color: #F1F5F9;
+    padding: 25px;
+    font-size: 18px;
 }
 
 .trabajo:hover {
@@ -107,15 +125,23 @@ a:hover {
 .serve_title {
     color: #F1F5F9;
     text-align: center;
+    font-size: 70px;
 }
 
+.sub-title {
+    color: #F1F5F9;
+    font-size: 22px;
+}
 .p_serve {
     color: #90A1B9;
+    font-size: 17px;
+   
 }
 
 .p_sub_serve {
     color: #90A1B9;
     text-align: center;
+     font-size: 30px;
 }
 
 .contenedor_servicios {
@@ -123,11 +149,10 @@ a:hover {
     flex-direction: row;
     gap: 30px;
     padding: 15px;
+    margin-left: 200px;
 }
 
-.sub-title {
-    color: #F1F5F9;
-}
+
 
 #desarrollo_web {
     background-color: rgba(255, 255, 255, 0.08);
@@ -234,30 +259,60 @@ a:hover {
 }
 
 
-#Casos_de_exito {
+#Portafolio {
     background-color: #02021a;
-    padding: 100px
+    padding: 160px
 }
 
-.p_casos_exito {
+.title_portafolio{
+    text-align: center;
+    font-size: 70px;
+}
+
+.p_portafolio {
     color: #90A1B9;
+    text-align: center;
+    font-size: 30px;
 }
 
-
-h4 {
-    color: #F1F5F9;
-    margin-left: 15px;
-}
-
-.contenedor_casos_exito {
+.contenedor_portafolio{
     display: flex;
-    flex-direction: row;
-    gap: 600px;
-    padding: 15px;
+    padding: 10px;
+    gap: 50px;
+    justify-content: center;
+    position: relative;
 }
 
-.app_img {
-    width: 250px;
+.app{
+    width: 400px;
+    height: 350px;
+    border-radius: 15px;
+    transition:transform 0.5s ease;
+}
+.app:hover{
+    transform: scale(1.1);
+}
+
+.game{
+    width: 400px;
+    height: 350px;
+    border-radius: 15px;
+    transition:transform 0.5s ease;
+}
+
+.game:hover{
+    transform: scale(1.1);
+}
+
+.page_web{
+    width: 400px;
+    height: 350px;
+    border-radius: 15px;
+     transition:transform 0.5s ease;
+}
+
+.page_web:hover{
+    transform: scale(1.1);
 }
 
 
@@ -272,15 +327,48 @@ h4 {
     margin-left: 15px;
 }
 
+.title-contact{
+    font-size: 35px;
+}
+
+.p-contact{
+    font-size: 20px;
+}
+
+#Email{
+    font-size: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+#Telefono{
+    font-size: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+#Oficina{
+    font-size: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.title-formulario {
+    color: #F1F5F9;
+    text-align: center;
+    font-size: 30px;
+}
+
 .Formulario {
-    background-color: #0019f6;
+    background-color: #010a59;
     display: block;
-    padding: 30px;
-    border-radius: 10px;
+    padding: 35px;
+    border-radius: 20px;
     width: 500px;
-    margin-left: 800px;
-    margin-bottom: 50px;
-    margin-top: -400px;
+    height: 520px;
+    margin-left: 1050px;
+    margin-bottom: 20px;
+    margin-top: -450px;
     /* Ajusta este valor para subirlo más o menos */
 }
 
@@ -291,12 +379,35 @@ h4 {
     width: 500px;
 }
 
+label{
+    color: #90A1B9;
+}
 
 input {
-    padding: 5px;
+    padding: 12px;
     border-radius: 10px;
     border: 1px solid #0019f6;
-    width: 100px
+    width: 200px
+}
+
+select{
+    padding: 12px;
+    border-radius:10px;
+}
+
+textarea{
+    padding: 20px;
+    border-radius: 10px;
+     border: 1px solid #0019f6;
+}
+
+button{
+    background-color: #4f46e5;
+    color: #F1F5F9;
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 18px;
 }
 
 .fila-inputs {
@@ -331,9 +442,75 @@ h5 {
 
 footer {
     background-color: #02021a;
-    padding: 100px;
+    padding: 10px;
 }
 
 p {
     color: #90A1B9;
+}
+
+.p-footer {
+    color: #90A1B9;
+    font-size: 18px;
+}
+
+.contenedor-footer {
+    display: flex;
+    gap: 50px;
+    margin-left: 35%;
+    margin-top: -10%;
+    padding: 30px;
+}
+
+.footer{
+    width: 500px;
+    margin-left: 60px;
+}
+#servicio{
+    width: 400px;
+    font-size: 18px;
+    
+}
+
+#empresa{
+    width: 400px;
+    font-size: 18px;
+}
+
+#legal{
+    width: 400px;
+    font-size: 18px;
+}
+
+#copy{
+    display: flex;
+    width: 400px;
+    margin-top: 220px;
+   margin-left: 40%;
+   font-size: 18px;
+}
+
+.icons{
+    margin-left: 80px;
+    padding: 20px;
+}
+
+.fa-x{
+    color: #F1F5F9;
+    font-size: 30px;
+}
+
+.fa-instagram{
+    color: #F1F5F9;
+    font-size: 30px;
+}
+
+.fa-github{
+    color: #F1F5F9;
+    font-size: 30px;
+}
+
+.fa-linkedin{
+    color: #F1F5F9;
+    font-size: 30px;
 }
