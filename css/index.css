@@ -519,89 +519,107 @@ p {
     font-size: 30px;
 }
 
-/* RESPONSIVE*/
-@media (min-width: 768px) {
-    nav {
-        padding: 5px;
-    }
+/* RESPONSIVE CORREGIDO */
+@media (max-width: 768px) {
 
-    #hero {
-        width: 569px;
+    /* Todo lo que sea 100% ocupará el ancho del teléfono */
+    nav,
+    #hero,
+    #Servicio,
+    #Portafolio,
+    #Contactanos,
+    footer {
+        width: 100% !important;
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 15px;
     }
 
     .hero_title {
-        font-size: 50px;
+        font-size: 40px;
+        /* Más pequeño para que no se corte */
     }
 
     .p_hero {
         font-size: 20px;
     }
 
-    nav {
-        width: 759px;
-    }
-
-    .proyecto {
-        width: 250px;
-    }
-
-    .trabajo {
-        width: 250px;
-    }
-
-    #Servicio {
-        width: 650px;
-
-    }
-
+    /* En lugar de 600px, usamos porcentajes para que sea flexible */
     .contenedor_servicios {
-        width: 600px;
+        width: 96%;
+        margin: 10px auto;
         background-color: #02021a;
-        margin-left: 20px;
-        margin-right: 600px;
+    }
+
+    #desarrollo_web {
+        width: 100%;
+        max-width: 200px;
+        margin: 10px auto;
     }
 
     .sub-title {
-        font-size: 17px;
+        font-size: 20px;
     }
 
-    .p_serve {
-        font-size: 10px;
+    #Diseño_UX-UI {
+        width: 100%;
+        max-width: 200px;
+        margin: 10px auto;
     }
 
-    #Portafolio {
-        width: 1050px;
-        margin-right: 100%;
+    #Diseño_de_Juegos {
+        width: 100%;
+        max-width: 200px;
+        margin: 10px auto;
     }
 
-    .game {
-        width: 400px;
+    #Desarrollo_Movil {
+        width: 100%;
+        max-width: 200px;
+        margin: 10px auto;
     }
 
-
-    .page_web {
-        width: 400px;
+    #Optmizacion_SEO {
+        width: 100%;
+        max-width: 200px;
+        margin: 10px auto;
     }
 
+    #Mantenimiento_Soporte {
+        width: 100%;
+        max-width: 200px;
+        margin: 10px auto;
+    }
+
+    .serve_title {
+        font-size: 35px;
+    }
+
+    .p_sub_serve {
+        font-size: 20px;
+    }
+
+    /* Los elementos del portafolio (game, page_web, app) */
+    .game,
+    .page_web,
     .app {
-        width: 400px;
-    }
-
-    #Contactanos {
-        width: 1170px;
-        margin-right: 100%;
+        width: 100%;
+        /* Que ocupen todo el ancho uno debajo del otro */
+        max-width: 290px;
+        /* Para que no se vean gigantes */
+        margin: 10px auto;
     }
 
     .Formulario {
-        margin-right: 650px;
-        margin-left: 650px;
-
+        width: 66%;
+        margin: 20px auto;
+        /* Centrado y sin márgenes de 600px */
     }
 
-    footer {
-        width: 1350px;
-        margin-right: 100%;
+    .proyecto,
+    .trabajo {
+        max-width: 100%;
+        /* Para que las fotos se adapten */
     }
-
-
 }
