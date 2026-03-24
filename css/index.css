@@ -1,4 +1,4 @@
-html{
+html {
     scroll-behavior: smooth;
 }
 
@@ -6,8 +6,8 @@ html{
 body {
     margin: 0;
     padding: 0;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 
-    'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont,
+        'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 header {
@@ -27,9 +27,10 @@ nav {
     justify-content: space-between;
 }
 
-.logo{
+.logo {
     font-size: 30px;
 }
+
 .menu_navegacion {
     display: flex;
 
@@ -132,16 +133,17 @@ a:hover {
     color: #F1F5F9;
     font-size: 22px;
 }
+
 .p_serve {
     color: #90A1B9;
     font-size: 17px;
-   
+
 }
 
 .p_sub_serve {
     color: #90A1B9;
     text-align: center;
-     font-size: 30px;
+    font-size: 30px;
 }
 
 .contenedor_servicios {
@@ -264,7 +266,7 @@ a:hover {
     padding: 160px
 }
 
-.title_portafolio{
+.title_portafolio {
     text-align: center;
     font-size: 70px;
 }
@@ -275,7 +277,7 @@ a:hover {
     font-size: 30px;
 }
 
-.contenedor_portafolio{
+.contenedor_portafolio {
     display: flex;
     padding: 10px;
     gap: 50px;
@@ -283,35 +285,36 @@ a:hover {
     position: relative;
 }
 
-.app{
+.app {
     width: 400px;
     height: 350px;
     border-radius: 15px;
-    transition:transform 0.5s ease;
+    transition: transform 0.5s ease;
 }
-.app:hover{
+
+.app:hover {
     transform: scale(1.1);
 }
 
-.game{
+.game {
     width: 400px;
     height: 350px;
     border-radius: 15px;
-    transition:transform 0.5s ease;
+    transition: transform 0.5s ease;
 }
 
-.game:hover{
+.game:hover {
     transform: scale(1.1);
 }
 
-.page_web{
+.page_web {
     width: 400px;
     height: 350px;
     border-radius: 15px;
-     transition:transform 0.5s ease;
+    transition: transform 0.5s ease;
 }
 
-.page_web:hover{
+.page_web:hover {
     transform: scale(1.1);
 }
 
@@ -327,27 +330,27 @@ a:hover {
     margin-left: 15px;
 }
 
-.title-contact{
+.title-contact {
     font-size: 35px;
 }
 
-.p-contact{
+.p-contact {
     font-size: 20px;
 }
 
-#Email{
-    font-size: 20px;
-    display: flex;
-    gap: 10px;
-}
-
-#Telefono{
+#Email {
     font-size: 20px;
     display: flex;
     gap: 10px;
 }
 
-#Oficina{
+#Telefono {
+    font-size: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+#Oficina {
     font-size: 20px;
     display: flex;
     gap: 10px;
@@ -379,7 +382,7 @@ a:hover {
     width: 500px;
 }
 
-label{
+label {
     color: #90A1B9;
 }
 
@@ -390,18 +393,18 @@ input {
     width: 200px
 }
 
-select{
+select {
     padding: 12px;
-    border-radius:10px;
+    border-radius: 10px;
 }
 
-textarea{
+textarea {
     padding: 20px;
     border-radius: 10px;
-     border: 1px solid #0019f6;
+    border: 1px solid #0019f6;
 }
 
-button{
+button {
     background-color: #4f46e5;
     color: #F1F5F9;
     border: none;
@@ -462,55 +465,143 @@ p {
     padding: 30px;
 }
 
-.footer{
+.footer {
     width: 500px;
     margin-left: 60px;
 }
-#servicio{
+
+#servicio {
     width: 400px;
     font-size: 18px;
-    
+
 }
 
-#empresa{
-    width: 400px;
-    font-size: 18px;
-}
-
-#legal{
+#empresa {
     width: 400px;
     font-size: 18px;
 }
 
-#copy{
+#legal {
+    width: 400px;
+    font-size: 18px;
+}
+
+#copy {
     display: flex;
     width: 400px;
     margin-top: 220px;
-   margin-left: 40%;
-   font-size: 18px;
+    margin-left: 40%;
+    font-size: 18px;
 }
 
-.icons{
+.icons {
     margin-left: 80px;
     padding: 20px;
 }
 
-.fa-x{
+.fa-x {
     color: #F1F5F9;
     font-size: 30px;
 }
 
-.fa-instagram{
+.fa-instagram {
     color: #F1F5F9;
     font-size: 30px;
 }
 
-.fa-github{
+.fa-github {
     color: #F1F5F9;
     font-size: 30px;
 }
 
-.fa-linkedin{
+.fa-linkedin {
     color: #F1F5F9;
     font-size: 30px;
+}
+
+/* RESPONSIVE*/
+@media (min-width: 768px) {
+    nav {
+        padding: 5px;
+    }
+
+    #hero {
+        width: 569px;
+    }
+
+    .hero_title {
+        font-size: 50px;
+    }
+
+    .p_hero {
+        font-size: 20px;
+    }
+
+    nav {
+        width: 759px;
+    }
+
+    .proyecto {
+        width: 250px;
+    }
+
+    .trabajo {
+        width: 250px;
+    }
+
+    #Servicio {
+        width: 650px;
+
+    }
+
+    .contenedor_servicios {
+        width: 600px;
+        background-color: #02021a;
+        margin-left: 20px;
+        margin-right: 600px;
+    }
+
+    .sub-title {
+        font-size: 17px;
+    }
+
+    .p_serve {
+        font-size: 10px;
+    }
+
+    #Portafolio {
+        width: 1050px;
+        margin-right: 100%;
+    }
+
+    .game {
+        width: 400px;
+    }
+
+
+    .page_web {
+        width: 400px;
+    }
+
+    .app {
+        width: 400px;
+    }
+
+    #Contactanos {
+        width: 1170px;
+        margin-right: 100%;
+    }
+
+    .Formulario {
+        margin-right: 650px;
+        margin-left: 650px;
+
+    }
+
+    footer {
+        width: 1350px;
+        margin-right: 100%;
+    }
+
+
 }
