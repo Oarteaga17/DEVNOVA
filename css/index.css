@@ -283,6 +283,7 @@ a:hover {
 .app{
     width: 400px;
     height: 350px;
+    object-fit: cover;
     border-radius: 15px;
     transition:transform 0.5s ease;
 }
@@ -293,6 +294,7 @@ a:hover {
 .game{
     width: 400px;
     height: 350px;
+    object-fit: cover;
     border-radius: 15px;
     transition:transform 0.5s ease;
 }
@@ -304,6 +306,7 @@ a:hover {
 .page_web{
     width: 400px;
     height: 350px;
+    object-fit: cover;
     border-radius: 15px;
      transition:transform 0.5s ease;
 }
@@ -511,7 +514,11 @@ p {
     font-size: 30px;
 }
 
-/* RESPONSIVE CORREGIDO PARA DEVNOVA */
+/*
+==========================
+RANGO DE LAPTOPS (Max 1024px)
+==========================
+*/
 @media (max-width: 1024px) {
 
     header {
@@ -554,28 +561,17 @@ p {
     }
 
     .contenedor_portafolio{
-        width: 100%;
-        padding: 10%;
-        margin-right: 50%;
-        margin-left: -21%;
+       flex-wrap: wrap;
+        gap: 10px;
+        background-color: #00f642;
         
         
     }
-
-     .game{
-        width: 100%;
-    }
-
-    .page_web{
-        width: 100%;
+    .game, .page_web,.app{
+        width: 90%;
+        object-fit: cover;
         
     }
-
-
-    .app{
-        width: 290%;
-    }
-
     .Formulario{
         margin-left: auto;
         margin-right: auto;
@@ -588,81 +584,79 @@ p {
    ========================================= */
 @media (max-width: 768px) {
 
-    /* 1. EL CONTENEDOR DEL FORMULARIO */
-    /* Le quitamos los 500px rígidos. Ahora le decimos: 
-       "Ocupa el 90% de la pantalla, sin importar cuánto mida". */
+   
     .Formulario {
         width: 90%; 
-        height: auto; /* Dejamos que la altura crezca sola hacia abajo */
-        padding: 20px; /* Reducimos un poco el relleno para ganar espacio */
+        height: auto;
+        padding: 20px;
     }
 
     /* 2. LA ETIQUETA FORM ADENTRO */
     .Formulario form {
-        width: 100%; /* Ahora se adapta al 100% de su contenedor padre */
+        width: 100%; 
     }
 
-    /* 3. LA FILA DE NOMBRE Y CORREO (¡El truco de magia!) */
-    /* En PC estaban uno al lado del otro. En tablet ya no caben bien, 
-       así que cambiamos la dirección a 'column' para ponerlos uno debajo del otro. */
+    
     .fila-inputs {
         flex-direction: column; 
     }
 
-    /* 4. LAS CAJAS DE TEXTO (Inputs, Select y Textarea) */
-    /* Quitamos los 200px fijos. Ahora queremos que ocupen todo el ancho disponible. */
+    
     input, select, textarea {
         width: 100%; 
-        box-sizing: border-box; /* Súper importante: evita que el padding engorde la caja y la rompa */
+        box-sizing: border-box; 
     }
-
-    /* =========================================
-       (AÑADE ESTO DENTRO DE TU @media max-width: 768px)
-       ========================================= */
-
-    /* 1. LAS CAJAS DE SERVICIOS */
-    /* Transformamos los 400px rígidos en bandas elásticas del 45%.
-       Así, en tablet ocupan casi la mitad de la pantalla (caben 2) 
-       y se encogen solas sin romper el fondo. */
+    
     #desarrollo_web, #Diseño_UX-UI, #Diseño_de_Juegos, #Desarrollo_Movil, #Optmizacion_SEO, #Mantenimiento_Soporte {
         width: 45%; 
-        height: auto; /* La altura crece sola si el texto es muy largo */
+        height: auto; 
     }
 
-    /* 2. EL FOOTER GIGANTE */
-    /* Quitamos las medidas de 500px y 400px. Le decimos que ocupen el 100%. */
+    
     .footer, #servicio, #empresa, #legal, #copy {
         width: 100%; 
-        margin-left: 0; /* Quitamos márgenes rebeldes */
-        text-align: center; /* Centramos el texto para UX */
+        margin-left: 0; 
+        text-align: center; 
     }
     
     .contenedor-footer {
-        flex-direction: column; /* Apilamos las columnas de información */
+        flex-direction: column; 
         align-items: center;
     }
 
-    /* 3. EL MENÚ DE NAVEGACIÓN */
-    /* Pasamos el logo arriba y los enlaces abajo para que respiren */
+    
     .menu_navegacion {
         flex-direction: column; 
         align-items: center;
     }
     ul {
-        margin-right: 0; /* Quitamos el margen derecho */
-        flex-wrap: wrap; /* Si los enlaces no caben, bajan de línea solos */
+        margin-right: 0; 
+        flex-wrap: wrap; 
         justify-content: center;
         padding: 0;
     }
 
-    /* 4. TAMAÑOS DE TEXTO GIGANTES */
-    /* Achicamos un poco los títulos para que palabras largas como 
-       "Transformamos" no empujen la pantalla hacia los lados */
+
+    #Email, #Telefono, #Oficina {
+        flex-direction: column; 
+        text-align: center;
+        gap: 5px; 
+        justify-content: center;
+    }
+
+ 
     .hero_title { font-size: 50px; }
     .serve_title { font-size: 45px; }
     .title_portafolio { font-size: 45px; }
 
-}
+
+    .game, .app, .page_web {
+        width: 45%; 
+        height: 45%;
+    
+    }
+
+
 
 /* =========================================
    3. TELÉFONOS CELULARES (Max 480px)
@@ -673,7 +667,7 @@ p {
     #Servicio { padding: 40px 15px; }
     #Portafolio { padding: 60px 15px; }
     #Contactanos { padding: 50px 15px; }
-
+}
     /* Títulos más pequeños para celular */
     .hero_title { font-size: 40px; }
     .serve_title { font-size: 35px; }
@@ -685,13 +679,16 @@ p {
     }
 
     /* Las imágenes del portafolio al 100% */
-    .app, .game, .page_web {
-        width: 100%;
-    }
+  
+
 
     /* El footer a 1 columna */
     .footer, #servicio, #empresa, #legal, #copy {
         width: 100%;
         margin-left: 0;
+    }
+
+    .game, .app, .page_web {
+        width: 100%; 
     }
 }
