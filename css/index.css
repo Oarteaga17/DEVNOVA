@@ -1,4 +1,4 @@
-html {
+html{
     scroll-behavior: smooth;
 }
 
@@ -6,8 +6,8 @@ html {
 body {
     margin: 0;
     padding: 0;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont,
-        'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 
+    'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 header {
@@ -18,17 +18,13 @@ header {
 h2 {
     margin-left: 15px;
     color: #F1F5F9;
-    font-size: 20px;
+    font-size: 30px;
 }
 
 nav {
     background-color: #02021a;
     font-size: 16px;
     justify-content: space-between;
-}
-
-.logo {
-    font-size: 30px;
 }
 
 .menu_navegacion {
@@ -133,17 +129,16 @@ a:hover {
     color: #F1F5F9;
     font-size: 22px;
 }
-
 .p_serve {
     color: #90A1B9;
     font-size: 17px;
-
+   
 }
 
 .p_sub_serve {
     color: #90A1B9;
     text-align: center;
-    font-size: 30px;
+     font-size: 30px;
 }
 
 .contenedor_servicios {
@@ -266,7 +261,7 @@ a:hover {
     padding: 160px
 }
 
-.title_portafolio {
+.title_portafolio{
     text-align: center;
     font-size: 70px;
 }
@@ -277,7 +272,7 @@ a:hover {
     font-size: 30px;
 }
 
-.contenedor_portafolio {
+.contenedor_portafolio{
     display: flex;
     padding: 10px;
     gap: 50px;
@@ -285,36 +280,35 @@ a:hover {
     position: relative;
 }
 
-.app {
+.app{
     width: 400px;
     height: 350px;
     border-radius: 15px;
-    transition: transform 0.5s ease;
+    transition:transform 0.5s ease;
 }
-
-.app:hover {
+.app:hover{
     transform: scale(1.1);
 }
 
-.game {
+.game{
     width: 400px;
     height: 350px;
     border-radius: 15px;
-    transition: transform 0.5s ease;
+    transition:transform 0.5s ease;
 }
 
-.game:hover {
+.game:hover{
     transform: scale(1.1);
 }
 
-.page_web {
+.page_web{
     width: 400px;
     height: 350px;
     border-radius: 15px;
-    transition: transform 0.5s ease;
+     transition:transform 0.5s ease;
 }
 
-.page_web:hover {
+.page_web:hover{
     transform: scale(1.1);
 }
 
@@ -330,27 +324,27 @@ a:hover {
     margin-left: 15px;
 }
 
-.title-contact {
+.title-contact{
     font-size: 35px;
 }
 
-.p-contact {
+.p-contact{
     font-size: 20px;
 }
 
-#Email {
-    font-size: 20px;
-    display: flex;
-    gap: 10px;
-}
-
-#Telefono {
+#Email{
     font-size: 20px;
     display: flex;
     gap: 10px;
 }
 
-#Oficina {
+#Telefono{
+    font-size: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+#Oficina{
     font-size: 20px;
     display: flex;
     gap: 10px;
@@ -382,7 +376,7 @@ a:hover {
     width: 500px;
 }
 
-label {
+label{
     color: #90A1B9;
 }
 
@@ -393,18 +387,18 @@ input {
     width: 200px
 }
 
-select {
+select{
     padding: 12px;
-    border-radius: 10px;
+    border-radius:10px;
 }
 
-textarea {
+textarea{
     padding: 20px;
     border-radius: 10px;
-    border: 1px solid #0019f6;
+     border: 1px solid #0019f6;
 }
 
-button {
+button{
     background-color: #4f46e5;
     color: #F1F5F9;
     border: none;
@@ -465,163 +459,239 @@ p {
     padding: 30px;
 }
 
-.footer {
+.footer{
     width: 500px;
     margin-left: 60px;
 }
-
-#servicio {
+#servicio{
     width: 400px;
     font-size: 18px;
-
+    
 }
 
-#empresa {
-    width: 400px;
-    font-size: 18px;
-}
-
-#legal {
+#empresa{
     width: 400px;
     font-size: 18px;
 }
 
-#copy {
-    display: flex;
+#legal{
     width: 400px;
-    margin-top: 220px;
-    margin-left: 40%;
     font-size: 18px;
 }
 
-.icons {
+#copy{
+    width: 400px;
+    margin-top: 50px;
+   margin-left: 40%;
+   font-size: 18px;
+}
+
+.icons{
     margin-left: 80px;
     padding: 20px;
 }
 
-.fa-x {
+.fa-x{
     color: #F1F5F9;
     font-size: 30px;
 }
 
-.fa-instagram {
+.fa-instagram{
     color: #F1F5F9;
     font-size: 30px;
 }
 
-.fa-github {
+.fa-github{
     color: #F1F5F9;
     font-size: 30px;
 }
 
-.fa-linkedin {
+.fa-linkedin{
     color: #F1F5F9;
     font-size: 30px;
 }
 
 /* RESPONSIVE CORREGIDO PARA DEVNOVA */
-@media (max-width: 992px) {
+@media (max-width: 1024px) {
 
-    /* Ocultar cualquier desbordamiento horizontal accidental */
-    body,
-    html {
-        overflow-x: hidden;
+    header {
+        position: sticky;
+    }
+    .hero_title{
+        /* BAJAR EL TITULO DE LA PAGINA */
+        font-size: 80px;
     }
 
-    /* Navegación */
-    nav {
+    .p_hero{
+        font-size: 20px;
+    }
+
+    nav{
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .serve_title{
+        font-size: 50px;
+    }
+
+    .p_sub_serve{
+        font-size: 20px;
+    }
+    .contenedor_servicios{
+        margin-left: 0;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .title_portafolio{
+        font-size: 50px;
+    }
+
+    .p_portafolio{
+        font-size: 20px;
+    }
+
+    .contenedor_portafolio{
         width: 100%;
-        max-width: 100%;
-        padding: 15px 10px;
-        text-align: center;
+        padding: 10%;
+        margin-right: 50%;
+        margin-left: -21%;
+        
+        
     }
 
-    /* Sección Hero principal */
-    #hero {
+     .game{
         width: 100%;
-        max-width: 100%;
-        text-align: center;
-        padding: 30px 15px;
     }
 
-    .hero_title {
-        font-size: 35px;
-        /* Tamaño legible pero sin desbordar */
-        line-height: 1.2;
-    }
-
-    .p_hero {
-        font-size: 18px;
-        margin-top: 15px;
-    }
-
-    /* Sección de Servicios */
-    #Servicio {
+    .page_web{
         width: 100%;
-        padding: 20px 10px;
+        
     }
 
-    .contenedor_servicios {
-        width: 90%;
-        background-color: #02021a;
-        margin: 0 auto;
-        /* Centra el contenedor y elimina el margen de 600px */
-        display: flex;
-        gap: 20px;
-        /* Da espacio entre cada cuadrito de servicio */
+
+    .app{
+        width: 290%;
     }
 
-    .sub-title {
-        font-size: 22px;
+    .Formulario{
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 50px;
     }
+}
 
-    .p_serve {
-        font-size: 14px;
-    }
+/* =========================================
+   RANGO DE TABLETS (Max 768px)
+   ========================================= */
+@media (max-width: 768px) {
 
-    /* Sección Portafolio */
-    #Portafolio {
-        width: 100%;
-        margin: 0 auto;
-        padding: 20px 10px;
-    }
-
-    .proyecto,
-    .trabajo {
-        width: 100%;
-        max-width: 100%;
-    }
-
-    /* Tarjetas del portafolio */
-    .game,
-    .page_web,
-    .app {
-        width: 100%;
-        max-width: 350px;
-        /* Evita que se estiren de más en tablets */
-        margin: 15px auto;
-        display: block;
-    }
-
-    /* Sección Contacto */
-    #Contactanos {
-        width: 100%;
-        margin: 0 auto;
-        padding: 20px 10px;
-    }
-
+    /* 1. EL CONTENEDOR DEL FORMULARIO */
+    /* Le quitamos los 500px rígidos. Ahora le decimos: 
+       "Ocupa el 90% de la pantalla, sin importar cuánto mida". */
     .Formulario {
-        width: 51%;
-        margin: 0 auto;
-        /* Centra el formulario y elimina el margen de 650px */
-        padding: 25px;
+        width: 90%; 
+        height: auto; /* Dejamos que la altura crezca sola hacia abajo */
+        padding: 20px; /* Reducimos un poco el relleno para ganar espacio */
     }
 
-    /* Footer */
-    footer {
+    /* 2. LA ETIQUETA FORM ADENTRO */
+    .Formulario form {
+        width: 100%; /* Ahora se adapta al 100% de su contenedor padre */
+    }
+
+    /* 3. LA FILA DE NOMBRE Y CORREO (¡El truco de magia!) */
+    /* En PC estaban uno al lado del otro. En tablet ya no caben bien, 
+       así que cambiamos la dirección a 'column' para ponerlos uno debajo del otro. */
+    .fila-inputs {
+        flex-direction: column; 
+    }
+
+    /* 4. LAS CAJAS DE TEXTO (Inputs, Select y Textarea) */
+    /* Quitamos los 200px fijos. Ahora queremos que ocupen todo el ancho disponible. */
+    input, select, textarea {
+        width: 100%; 
+        box-sizing: border-box; /* Súper importante: evita que el padding engorde la caja y la rompa */
+    }
+
+    /* =========================================
+       (AÑADE ESTO DENTRO DE TU @media max-width: 768px)
+       ========================================= */
+
+    /* 1. LAS CAJAS DE SERVICIOS */
+    /* Transformamos los 400px rígidos en bandas elásticas del 45%.
+       Así, en tablet ocupan casi la mitad de la pantalla (caben 2) 
+       y se encogen solas sin romper el fondo. */
+    #desarrollo_web, #Diseño_UX-UI, #Diseño_de_Juegos, #Desarrollo_Movil, #Optmizacion_SEO, #Mantenimiento_Soporte {
+        width: 45%; 
+        height: auto; /* La altura crece sola si el texto es muy largo */
+    }
+
+    /* 2. EL FOOTER GIGANTE */
+    /* Quitamos las medidas de 500px y 400px. Le decimos que ocupen el 100%. */
+    .footer, #servicio, #empresa, #legal, #copy {
+        width: 100%; 
+        margin-left: 0; /* Quitamos márgenes rebeldes */
+        text-align: center; /* Centramos el texto para UX */
+    }
+    
+    .contenedor-footer {
+        flex-direction: column; /* Apilamos las columnas de información */
+        align-items: center;
+    }
+
+    /* 3. EL MENÚ DE NAVEGACIÓN */
+    /* Pasamos el logo arriba y los enlaces abajo para que respiren */
+    .menu_navegacion {
+        flex-direction: column; 
+        align-items: center;
+    }
+    ul {
+        margin-right: 0; /* Quitamos el margen derecho */
+        flex-wrap: wrap; /* Si los enlaces no caben, bajan de línea solos */
+        justify-content: center;
+        padding: 0;
+    }
+
+    /* 4. TAMAÑOS DE TEXTO GIGANTES */
+    /* Achicamos un poco los títulos para que palabras largas como 
+       "Transformamos" no empujen la pantalla hacia los lados */
+    .hero_title { font-size: 50px; }
+    .serve_title { font-size: 45px; }
+    .title_portafolio { font-size: 45px; }
+
+}
+
+/* =========================================
+   3. TELÉFONOS CELULARES (Max 480px)
+   ========================================= */
+@media (max-width: 480px) {
+    /* Reducimos los espacios enormes de relleno (padding) */
+    #hero { padding: 50px 20px; }
+    #Servicio { padding: 40px 15px; }
+    #Portafolio { padding: 60px 15px; }
+    #Contactanos { padding: 50px 15px; }
+
+    /* Títulos más pequeños para celular */
+    .hero_title { font-size: 40px; }
+    .serve_title { font-size: 35px; }
+    .title_portafolio { font-size: 35px; }
+
+    /* AQUI LA MAGIA: Todas las cajas pasan a 1 sola columna ocupando el 100% */
+    #desarrollo_web, #Diseño_UX-UI, #Diseño_de_Juegos, #Desarrollo_Movil, #Optmizacion_SEO, #Mantenimiento_Soporte {
+        width: 100%; 
+    }
+
+    /* Las imágenes del portafolio al 100% */
+    .app, .game, .page_web {
         width: 100%;
-        margin: 0 auto;
-        padding: 20px 10px;
-        text-align: center;
+    }
+
+    /* El footer a 1 columna */
+    .footer, #servicio, #empresa, #legal, #copy {
+        width: 100%;
+        margin-left: 0;
     }
 }
