@@ -1,0 +1,670 @@
+html{
+    scroll-behavior: smooth;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 
+    'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+header {
+    position: sticky;
+    top: 0;
+}
+
+h2 {
+    margin-left: 15px;
+    color: #F1F5F9;
+    font-size: 30px;
+}
+
+nav {
+    background-color: #02021a;
+    font-size: 16px;
+    justify-content: space-between;
+}
+
+.menu_navegacion {
+    display: flex;
+
+}
+
+ul {
+    display: flex;
+    gap: 30px;
+    margin-right: 15px;
+}
+
+li {
+    list-style: none;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #E5E7EB;
+    transition: 1s;
+}
+
+a:hover {
+    color: #F1F5F9;
+}
+
+
+#hero {
+    background-color: #02021a;
+    padding: 100px
+}
+
+.hero_title {
+    text-align: center;
+    color: #F1F5F9;
+    font-size: 110px;
+}
+
+
+.color_text {
+    background: linear-gradient(90deg, #6A65FF, #D076FF);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.p_hero {
+    text-align: center;
+    color: #90A1B9;
+    font-size: 30px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.proyecto {
+    border-radius: 25px;
+    padding: 15px;
+    background-color: #4f46e5;
+    border-color: #4f46e5;
+    color: #F1F5F9;
+    font-weight: 500;
+    padding: 25px;
+    font-size: 18px;
+}
+
+.trabajo {
+    border-radius: 25px;
+    padding: 15px;
+    background-color: #101828;
+    border-color: #F1F5F9;
+    color: #F1F5F9;
+    padding: 25px;
+    font-size: 18px;
+}
+
+.trabajo:hover {
+    background-color: #1E2939;
+}
+
+
+
+#Servicio {
+    background-color: #081121;
+    padding: 60px;
+}
+
+.serve_title {
+    color: #F1F5F9;
+    text-align: center;
+    font-size: 70px;
+}
+
+.sub-title {
+    color: #F1F5F9;
+    font-size: 22px;
+}
+.p_serve {
+    color: #90A1B9;
+    font-size: 17px;
+   
+}
+
+.p_sub_serve {
+    color: #90A1B9;
+    text-align: center;
+     font-size: 30px;
+}
+
+.contenedor_servicios {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    padding: 15px;
+    margin-left: 200px;
+}
+
+
+
+#desarrollo_web {
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    width: 400px;
+    height: 250px;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+#Diseño_UX-UI {
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    width: 400px;
+    height: 250px;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+#Diseño_de_Juegos {
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    width: 400px;
+    height: 250px;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+#Desarrollo_Movil {
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    width: 400px;
+    height: 250px;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+#Optmizacion_SEO {
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    width: 400px;
+    height: 250px;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+#Mantenimiento_Soporte {
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.148);
+    width: 400px;
+    height: 250px;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.fa-code {
+    background-color: rgb(53, 76, 147);
+    width: 50px;
+    padding: 20px;
+    border-radius: 15px;
+    color: #00319c;
+}
+
+.fa-table-columns {
+    background-color: rgb(200, 0, 255);
+    width: 50px;
+    padding: 20px;
+    border-radius: 15px;
+    color: #bc90c8;
+}
+
+.fa-gamepad {
+    background-color: rgb(121, 168, 122);
+    width: 50px;
+    padding: 20px;
+    border-radius: 15px;
+    color: #00f642;
+}
+
+
+.fa-mobile {
+    background-color: rgb(176, 111, 169);
+    width: 50px;
+    padding: 20px;
+    border-radius: 15px;
+    color: #f600b9;
+}
+
+
+.fa-magnifying-glass {
+    background-color: rgb(237, 245, 200);
+    width: 50px;
+    padding: 20px;
+    border-radius: 15px;
+    color: #d5f600;
+}
+
+.fa-bolt-lightning {
+    background-color: rgb(177, 181, 221);
+    width: 50px;
+    padding: 20px;
+    border-radius: 15px;
+    color: #0019f6;
+}
+
+
+#Portafolio {
+    background-color: #02021a;
+    padding: 160px
+}
+
+.title_portafolio{
+    text-align: center;
+    font-size: 70px;
+}
+
+.p_portafolio {
+    color: #90A1B9;
+    text-align: center;
+    font-size: 30px;
+}
+
+.contenedor_portafolio{
+    display: flex;
+    padding: 10px;
+    gap: 50px;
+    justify-content: center;
+    position: relative;
+}
+
+.app{
+    width: 400px;
+    height: 350px;
+    border-radius: 15px;
+    transition:transform 0.5s ease;
+}
+.app:hover{
+    transform: scale(1.1);
+}
+
+.game{
+    width: 400px;
+    height: 350px;
+    border-radius: 15px;
+    transition:transform 0.5s ease;
+}
+
+.game:hover{
+    transform: scale(1.1);
+}
+
+.page_web{
+    width: 400px;
+    height: 350px;
+    border-radius: 15px;
+     transition:transform 0.5s ease;
+}
+
+.page_web:hover{
+    transform: scale(1.1);
+}
+
+
+#Contactanos {
+    background-color: #081121;
+    padding: 100px;
+}
+
+
+.contact {
+    color: #F1F5F9;
+    margin-left: 15px;
+}
+
+.title-contact{
+    font-size: 35px;
+}
+
+.p-contact{
+    font-size: 20px;
+}
+
+#Email{
+    font-size: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+#Telefono{
+    font-size: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+#Oficina{
+    font-size: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.title-formulario {
+    color: #F1F5F9;
+    text-align: center;
+    font-size: 30px;
+}
+
+.Formulario {
+    background-color: #010a59;
+    display: block;
+    padding: 35px;
+    border-radius: 20px;
+    width: 500px;
+    height: 520px;
+    margin-left: 1050px;
+    margin-bottom: 20px;
+    margin-top: -450px;
+    /* Ajusta este valor para subirlo más o menos */
+}
+
+.Formulario form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 500px;
+}
+
+label{
+    color: #90A1B9;
+}
+
+input {
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #0019f6;
+    width: 200px
+}
+
+select{
+    padding: 12px;
+    border-radius:10px;
+}
+
+textarea{
+    padding: 20px;
+    border-radius: 10px;
+     border: 1px solid #0019f6;
+}
+
+button{
+    background-color: #4f46e5;
+    color: #F1F5F9;
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+.fila-inputs {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+}
+
+.grupo-input {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+h5 {
+    color: #F1F5F9;
+}
+
+#Email {
+    color: #90A1B9;
+}
+
+#Telefono {
+    color: #90A1B9;
+}
+
+#Oficina {
+    color: #90A1B9;
+}
+
+
+footer {
+    background-color: #02021a;
+    padding: 10px;
+}
+
+p {
+    color: #90A1B9;
+}
+
+.p-footer {
+    color: #90A1B9;
+    font-size: 18px;
+}
+
+.contenedor-footer {
+    display: flex;
+    gap: 50px;
+    margin-left: 35%;
+    margin-top: -10%;
+    padding: 30px;
+}
+
+.footer{
+    width: 500px;
+    margin-left: 60px;
+}
+#servicio{
+    width: 400px;
+    font-size: 18px;
+    
+}
+
+#empresa{
+    width: 400px;
+    font-size: 18px;
+}
+
+#legal{
+    width: 400px;
+    font-size: 18px;
+}
+
+#copy{
+    width: 400px;
+    margin-top: 50px;
+   margin-left: 40%;
+   font-size: 18px;
+}
+
+.icons{
+    margin-left: 80px;
+    padding: 20px;
+}
+
+.fa-x{
+    color: #F1F5F9;
+    font-size: 30px;
+}
+
+.fa-instagram{
+    color: #F1F5F9;
+    font-size: 30px;
+}
+
+.fa-github{
+    color: #F1F5F9;
+    font-size: 30px;
+}
+
+.fa-linkedin{
+    color: #F1F5F9;
+    font-size: 30px;
+}
+
+/* RESPONSIVE CORREGIDO PARA DEVNOVA */
+@media (max-width: 1024px) {
+
+    header {
+        position: sticky;
+    }
+    .hero_title{
+        /* BAJAR EL TITULO DE LA PAGINA */
+        font-size: 80px;
+    }
+
+    .p_hero{
+        font-size: 20px;
+    }
+
+    nav{
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .serve_title{
+        font-size: 50px;
+    }
+
+    .p_sub_serve{
+        font-size: 20px;
+    }
+    .contenedor_servicios{
+        margin-left: 0;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .title_portafolio{
+        font-size: 50px;
+    }
+
+    .p_portafolio{
+        font-size: 20px;
+    }
+
+    .contenedor_portafolio{
+        width: 100%;
+        padding: 10%;
+        margin-right: 50%;
+        margin-left: -21%;
+        
+        
+    }
+
+     .game{
+        width: 100%;
+    }
+
+    .page_web{
+        width: 100%;
+        
+    }
+
+
+    .app{
+        width: 290%;
+    }
+
+    .Formulario{
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 50px;
+    }
+}
+
+@media(max-width: 768px){
+    /*
+    1. MENU DE NAVEGACION
+    */
+    .menu_navegacion{
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 20px;
+    }
+
+    ul{
+        margin-top: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* 
+    2. TEXTO PRINCIPAL
+    */
+    .hero_title{ font-size: 50px; }
+    .p_hero{ font-size: 20px;}
+    .serve_title{font-size: 45px;}
+
+
+    /*
+    3.BOTONES
+    */
+
+    .buttons{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /*
+    4. TARJETAS DE SERVICIOS
+    */
+#desarrollo_web, #Diseño_UX-UI, #Diseño_de_Juegos, #Desarrollo_Movil, 
+#Optmizacion_SEO, #Mantenimiento_Soporte{
+    width: 45%;
+    height: auto;
+}
+
+    /*  
+    5. PORTAFOLIO
+    */
+
+    .Formulario{
+        width: 90%;
+        padding: 20px;
+    }
+
+    
+}
+
+/* =========================================
+   3. TELÉFONOS CELULARES (Max 480px)
+   ========================================= */
+@media (max-width: 480px) {
+    /* Reducimos los espacios enormes de relleno (padding) */
+    #hero { padding: 50px 20px; }
+    #Servicio { padding: 40px 15px; }
+    #Portafolio { padding: 60px 15px; }
+    #Contactanos { padding: 50px 15px; }
+
+    /* Títulos más pequeños para celular */
+    .hero_title { font-size: 40px; }
+    .serve_title { font-size: 35px; }
+    .title_portafolio { font-size: 35px; }
+
+    /* AQUI LA MAGIA: Todas las cajas pasan a 1 sola columna ocupando el 100% */
+    #desarrollo_web, #Diseño_UX-UI, #Diseño_de_Juegos, #Desarrollo_Movil, #Optmizacion_SEO, #Mantenimiento_Soporte {
+        width: 100%; 
+    }
+
+    /* Las imágenes del portafolio al 100% */
+    .app, .game, .page_web {
+        width: 100%;
+    }
+
+    /* El footer a 1 columna */
+    .footer, #servicio, #empresa, #legal, #copy {
+        width: 100%;
+        margin-left: 0;
+    }
+}
