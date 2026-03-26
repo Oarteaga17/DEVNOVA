@@ -21,6 +21,29 @@ h2 {
     font-size: 30px;
 }
 
+   /*====== GUARDAR EN LA POKEBOLA =====*/
+   .menu-checkbox {
+    display: none;
+}
+
+/* 2. PREPARAR AL ENTRENADOR (Solo para móvil) */
+.hamburguesa {
+    margin-top: 15px;
+  display: none; /* Por defecto oculto en monitores grandes */
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 1001; /* Siempre por encima del menú */
+}
+ 
+.bar {
+  margin-top: 2px;
+  width: 30px;
+  height: 3px;
+  background-color: #00ffcc; /* Tu verde neón característico */
+  transition: 0.3s; /* Para que los cambios sean suaves */
+}
+
 nav {
     background-color: #02021a;
     font-size: 16px;
@@ -533,12 +556,6 @@ RANGO DE LAPTOPS (Max 1024px)
         font-size: 20px;
     }
 
-    nav{
-        flex-direction: column;
-        align-items: center;
-
-    }
-
     .serve_title{
         font-size: 50px;
     }
@@ -583,7 +600,41 @@ RANGO DE LAPTOPS (Max 1024px)
    RANGO DE TABLETS (Max 768px)
    ========================================= */
 @media (max-width: 768px) {
+    .hamburguesa {
+    display: flex; /* ¡Aparece el Entrenador! */
+  }
 
+  .enlaces {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Snorlax está fuera del gimnasio (pantalla) */
+    width: 30%; /* Ocupa solo una parte de la pantalla móvil */
+    height: 100vh;
+    background-color: #1e293b;
+    display: flex;
+    flex-direction: column; /* Enlaces uno debajo del otro */
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    transition: 0.5s ease-in-out; /* Velocidad de entrada */
+    z-index: 1000;
+  }
+
+  /* EL ATAQUE ESPECIAL: Cuando la Pokébola se abre (:checked) 
+     le ordena a su hermano (~ .enlaces) que entre a escena */
+  .menu-checkbox:checked ~ .enlaces {
+    right: 0; /* Snorlax entra al centro del campo */
+  }
+
+  /* EXTRA: Animación simple para que el botón sepa que fue presionado */
+  .menu-checkbox:checked ~ .hamburguesa .bar:nth-child(2) {
+    opacity: 0; /* Desaparece la barra del medio */
+  }
+
+
+  nav{
+    padding: 3%;
+  }
    
     .Formulario {
         width: 90%; 
@@ -625,9 +676,7 @@ RANGO DE LAPTOPS (Max 1024px)
     }
 
     
-    .menu_navegacion {
-        flex-direction: column; 
-        align-items: center;
+    .menu_navegacion { 
     }
     ul {
         margin-right: 0; 
