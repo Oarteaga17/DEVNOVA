@@ -21,6 +21,7 @@ h2 {
     font-size: 30px;
 }
 
+
    /*====== GUARDAR EN LA POKEBOLA =====*/
    .menu-checkbox {
     display: none;
@@ -601,33 +602,34 @@ RANGO DE LAPTOPS (Max 1024px)
    ========================================= */
 @media (max-width: 768px) {
     .hamburguesa {
-    display: flex !important;/* ¡Aparece el Entrenador! */
+    display: flex !important; /* Ahora sí aparecerá */
+    position: relative;
+    z-index: 1002; /* Por encima de Snorlax */
   }
 
   .enlaces {
     position: fixed;
     top: 0;
-    right: -100%; /* Snorlax está fuera del gimnasio (pantalla) */
-    width: 30%; /* Ocupa solo una parte de la pantalla móvil */
+    right: -100%; 
+    width: 50%; /* MEJORA: 80% para que se vea bien en celulares */
     height: 100vh;
-    background-color: #1e293b;
+    background-color: #02021a; /* Fondo oscuro como tu DevNova */
     display: flex;
-    flex-direction: column; /* Enlaces uno debajo del otro */
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    transition: 0.5s ease-in-out; /* Velocidad de entrada */
+    transition: 0.5s ease-in-out;
     z-index: 1000;
   }
 
-  /* EL ATAQUE ESPECIAL: Cuando la Pokébola se abre (:checked) 
-     le ordena a su hermano (~ .enlaces) que entre a escena */
+  /* La orden de ataque */
   .menu-checkbox:checked ~ .enlaces {
-    right: 0; /* Snorlax entra al centro del campo */
+    right: 0;
   }
 
   /* EXTRA: Animación simple para que el botón sepa que fue presionado */
-  .menu-checkbox:checked ~ .hamburguesa .bar:nth-child(2) {
+  .menu-checkbox:checked ~ .hamburguesa .bar:nth-child(3) {
     opacity: 0; /* Desaparece la barra del medio */
   }
 
