@@ -4,7 +4,6 @@ html{
 
 
 body {
-    border:  10px solid red !important;
     margin: 0;
     padding: 0;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 
@@ -23,27 +22,41 @@ h2 {
 }
 
 
-   /*====== GUARDAR EN LA POKEBOLA =====*/
-   .menu-checkbox {
+/* Ocultamos el checkbox y la hamburguesa porque en PC no se necesitan */
+.menu-checkbox {
     display: none;
 }
 
-/* 2. PREPARAR AL ENTRENADOR (Solo para móvil) */
 .hamburguesa {
+    display: none; /* Oculto por defecto */
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
     margin-top: 15px;
-  display: none; /* Por defecto oculto en monitores grandes */
-  flex-direction: column;
-  gap: 5px;
-  cursor: pointer;
-  z-index: 1001; /* Siempre por encima del menú */
+    z-index: 1000; /* Asegura que siempre se pueda hacer clic */
 }
- 
+
 .bar {
-  margin-top: 2px;
-  width: 30px;
-  height: 3px;
-  background-color: #00ffcc !important; /* Tu verde neón característico */
-  transition: 0.3s; /* Para que los cambios sean suaves */
+    width: 30px;
+    height: 3px;
+    background-color: #00ffcc !important; /* Tu color neón */
+    transition: 0.3s;
+}
+
+/* El contenedor principal de la barra */
+.menu_navegacion {
+    display: flex;
+    justify-content: space-between; /* Separa el logo a la izquierda y el menú a la derecha */
+    align-items: center;
+    background-color: #02021a;
+    padding: 10px 20px;
+}
+
+/* La lista de enlaces normal en PC */
+.enlaces {
+    display: flex; /* Enlaces uno al lado del otro */
+    gap: 30px;
+    margin-right: 15px;
 }
 
 nav {
@@ -602,32 +615,31 @@ RANGO DE LAPTOPS (Max 1024px)
    RANGO DE TABLETS (Max 768px)
    ========================================= */
 @media (max-width: 768px) {
+   /* 1. Hacemos aparecer la hamburguesa */
     .hamburguesa {
-    display: flex !important; /* Ahora sí aparecerá */
-    position: relative;
-    z-index: 1002; /* Por encima de Snorlax */
-  }
+        display: flex; 
+    }
 
-  .enlaces {
-    position: fixed;
-    top: 0;
-    right: -100%; 
-    width: 50%; /* MEJORA: 80% para que se vea bien en celulares */
-    height: 100vh;
-    background-color: #02021a; /* Fondo oscuro como tu DevNova */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    transition: 0.5s ease-in-out;
-    z-index: 1000;
-  }
+    /* 2. Transformamos la lista de enlaces en un panel lateral oculto */
+    .enlaces {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Lo escondemos fuera de la pantalla a la derecha */
+        width: 80%; /* Le damos un ancho decente para el celular */
+        height: 100vh;
+        background-color: #02021a; /* Mismo color de tu nav */
+        flex-direction: column; /* Ponemos los enlaces uno debajo de otro */
+        justify-content: center;
+        align-items: center;
+        transition: 0.4s ease; /* Animación para que entre suave */
+        z-index: 999; /* Lo pone por encima del resto de tu página */
+    }
 
-  /* La orden de ataque */
-  .menu-checkbox:checked ~ .enlaces {
-    right: 0;
-  }
+    /* 3. LA REGLA CLAVE: Cuando el checkbox esté marcado, mueve .enlaces a la pantalla */
+    .menu-checkbox:checked ~ .enlaces {
+        right: 0;
+    }
+
 
   /* EXTRA: Animación simple para que el botón sepa que fue presionado */
   .menu-checkbox:checked ~ .hamburguesa .bar:nth-child(3) {
