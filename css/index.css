@@ -552,12 +552,40 @@ p {
     font-size: 30px;
 }
 
+@media (max-width: 1400px){
+    header{
+        position: sticky;
+    }
+
+
+
+.hero_title{
+        /* BAJAR EL TITULO DE LA PAGINA */
+        font-size: 120px;
+    }
+
+    .app,.game,.page_web{
+        width: 350px;
+        height: 300px;
+    }
+    
+
+    .Formulario{
+         margin-left: auto;
+        margin-right: auto;
+        margin-top: 50px;
+    }
+}
+
+
+
+
 /*
 ==========================
 RANGO DE LAPTOPS (Max 1024px)
 ==========================
 */
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
 
     header {
         position: sticky;
@@ -608,6 +636,113 @@ RANGO DE LAPTOPS (Max 1024px)
         margin-left: auto;
         margin-right: auto;
         margin-top: 50px;
+    }
+}
+
+/*============
+992px
+===============*/
+@media (max-width: 992px) {
+   /* 1. Hacemos aparecer la hamburguesa */
+    .hamburguesa {
+        display: flex; 
+    }
+
+    /* 2. Transformamos la lista de enlaces en un panel lateral oculto */
+    .enlaces {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Lo escondemos fuera de la pantalla a la derecha */
+        width: 80%; /* Le damos un ancho decente para el celular */
+        height: 100vh;
+        background-color: #02021a; /* Mismo color de tu nav */
+        flex-direction: column; /* Ponemos los enlaces uno debajo de otro */
+        justify-content: center;
+        align-items: center;
+        transition: 0.4s ease; /* Animación para que entre suave */
+        z-index: 999; /* Lo pone por encima del resto de tu página */
+    }
+
+    /* 3. LA REGLA CLAVE: Cuando el checkbox esté marcado, mueve .enlaces a la pantalla */
+    .menu-checkbox:checked ~ .enlaces {
+        right: 0;
+    }
+
+
+  /* EXTRA: Animación simple para que el botón sepa que fue presionado */
+  .menu-checkbox:checked ~ .hamburguesa .bar:nth-child(3) {
+    opacity: 0; /* Desaparece la barra del medio */
+  }
+
+
+  nav{
+    padding: 3%;
+  }
+   
+    .Formulario {
+        width: 90%; 
+        height: auto;
+        padding: 20px;
+    }
+
+    /* 2. LA ETIQUETA FORM ADENTRO */
+    .Formulario form {
+        width: 100%; 
+    }
+
+    
+    .fila-inputs {
+        flex-direction: column; 
+    }
+
+    
+    input, select, textarea {
+        width: 100%; 
+        box-sizing: border-box; 
+    }
+    
+    #desarrollo_web, #Diseño_UX-UI, #Diseño_de_Juegos, #Desarrollo_Movil, #Optmizacion_SEO, #Mantenimiento_Soporte {
+        width: 45%; 
+        height: auto; 
+    }
+
+    
+    .footer, #servicio, #empresa, #legal, #copy {
+        width: 100%; 
+        margin-left: 0; 
+        text-align: center; 
+    }
+    
+    .contenedor-footer {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    ul {
+        margin-right: 0; 
+        flex-wrap: wrap; 
+        justify-content: center;
+        padding: 0;
+    }
+
+
+    #Email, #Telefono, #Oficina {
+        flex-direction: column; 
+        text-align: center;
+        gap: 5px; 
+        justify-content: center;
+    }
+
+ 
+    .hero_title { font-size: 50px; }
+    .serve_title { font-size: 45px; }
+    .title_portafolio { font-size: 45px; }
+
+
+    .game, .app, .page_web {
+        width: 45%; 
+        height: 45%;
+    
     }
 }
 
