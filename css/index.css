@@ -40,7 +40,7 @@ h2 {
   margin-top: 2px;
   width: 30px;
   height: 3px;
-  background-color: #00ffcc; /* Tu verde neón característico */
+  background-color: #00ffcc !important; /* Tu verde neón característico */
   transition: 0.3s; /* Para que los cambios sean suaves */
 }
 
@@ -601,7 +601,7 @@ RANGO DE LAPTOPS (Max 1024px)
    ========================================= */
 @media (max-width: 768px) {
     .hamburguesa {
-    display: flex; /* ¡Aparece el Entrenador! */
+    display: flex !important;/* ¡Aparece el Entrenador! */
   }
 
   .enlaces {
@@ -675,9 +675,6 @@ RANGO DE LAPTOPS (Max 1024px)
         align-items: center;
     }
 
-    
-    .menu_navegacion { 
-    }
     ul {
         margin-right: 0; 
         flex-wrap: wrap; 
