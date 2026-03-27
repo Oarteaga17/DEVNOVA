@@ -38,11 +38,11 @@ h2 {
 }
 
 .bar {
-    width: 40px;
-    border-radius: 12%;
-    padding: 3px;
+    width: 30px;
+    border-radius: 18%;
+    padding: 1px;
     height: 3px;
-    background-color: #00ffcc !important; /* Tu color neón */
+    background-color: #F1F5F9 !important; /* Tu color neón */
     transition: 0.3s;
 }
 
@@ -624,18 +624,24 @@ RANGO DE LAPTOPS (Max 1200px)
         font-size: 20px;
     }
 
-    .contenedor_portafolio{
-       flex-wrap: wrap;
-        gap: 10px;
-        background-color: #00f642;
-        
-        
-    }
-    .game, .page_web,.app{
-        width: 90%;
+    .game{
+        width: 250px;
+        height: 250px;
         object-fit: cover;
-        
     }
+
+    .app{
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+    }
+
+    .page_web{
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+    }
+
     .Formulario{
         margin-left: auto;
         margin-right: auto;
@@ -655,10 +661,12 @@ RANGO DE LAPTOPS (Max 1200px)
     /* 2. Transformamos la lista de enlaces en un panel lateral oculto */
     .enlaces {
         position: fixed;
-        top: 0;
+        top: 10%;
+        padding: 5% 2% 5% 2% ;
+        margin-left: 20%;
         right: -100%; /* Lo escondemos fuera de la pantalla a la derecha */
-        width: 35%; /* Le damos un ancho decente para el celular */
-        height: 100vh;
+        width: 20%; /* Le damos un ancho decente para el celular */
+        height: 20vh;
         background-color: #02021a; /* Mismo color de tu nav */
         flex-direction: column; /* Ponemos los enlaces uno debajo de otro */
         justify-content: center;
@@ -677,7 +685,6 @@ RANGO DE LAPTOPS (Max 1200px)
   .menu-checkbox:checked ~ .hamburguesa .bar:nth-child(3) {
     opacity: 0; /* Desaparece la barra del medio */
   }
-
 
   h2{
     font-size: 35px;
@@ -718,7 +725,7 @@ RANGO DE LAPTOPS (Max 1200px)
     .footer, #servicio, #empresa, #legal, #copy {
         width: 100%; 
         margin-left: 0; 
-        text-align: center; 
+        
     }
     
     .contenedor-footer {
@@ -747,13 +754,20 @@ RANGO DE LAPTOPS (Max 1200px)
     .title_portafolio { font-size: 45px; }
 
 
-    .game, .app, .page_web {
-        width: 45%; 
-        height: 45%;
-    
+    .game{
+        width: 200px;
+        height: 200px;
     }
+    .app{
+        width: 200px;
+        height: 200px;
+    }
+    .page_web{
+        width: 200px;
+        height: 200px;  
 }
 
+}
 /* =========================================
    RANGO DE TABLETS (Max 768px)
    ========================================= */
@@ -766,10 +780,10 @@ RANGO DE LAPTOPS (Max 1200px)
     /* 2. Transformamos la lista de enlaces en un panel lateral oculto */
     .enlaces {
         position: fixed;
-        top: 0;
+        top: 12%;
         right: -100%; /* Lo escondemos fuera de la pantalla a la derecha */
-        width: 80%; /* Le damos un ancho decente para el celular */
-        height: 100vh;
+        width: 30%; /* Le damos un ancho decente para el celular */
+        height: 40vh;
         background-color: #02021a; /* Mismo color de tu nav */
         flex-direction: column; /* Ponemos los enlaces uno debajo de otro */
         justify-content: center;
@@ -794,6 +808,7 @@ RANGO DE LAPTOPS (Max 1200px)
     padding: 3%;
   }
    
+
     .Formulario {
         width: 90%; 
         height: auto;
@@ -824,13 +839,11 @@ RANGO DE LAPTOPS (Max 1200px)
     
     .footer, #servicio, #empresa, #legal, #copy {
         width: 100%; 
-        margin-left: 0; 
-        text-align: center; 
+        margin-left: 0;  
     }
     
     .contenedor-footer {
         flex-direction: column; 
-        align-items: center;
     }
 
     ul {
@@ -853,11 +866,22 @@ RANGO DE LAPTOPS (Max 1200px)
     .serve_title { font-size: 45px; }
     .title_portafolio { font-size: 45px; }
 
+    .game{
+        width: 90px;
+        height: 90px;
+        object-fit: cover;
+    }
 
-    .game, .app, .page_web {
-        width: 45%; 
-        height: 45%;
-    
+    .app{
+        width: 105px;
+        height: 105px;
+        object-fit: cover;
+    }
+
+    .page_web{
+        width: 90px;
+        height: 90px;
+        object-fit: cover;
     }
 
 
