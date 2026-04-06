@@ -765,17 +765,15 @@ MENÚ DE NAVEGACIÓN HAMBURGUESA
         box-sizing: border-box;
     }
 
-    /* 1. ESTA ES TU NUEVA PISTA DEL CARRUSEL */
+  /* 1. LA PISTA DEL CARRUSEL */
     .slider-container {
         display: flex;
         flex-direction: row;
-        flex-wrap: nowrap; /* Evita que bajen a la siguiente línea */
-        overflow-x: auto; /* Activa el scroll horizontal */
-        scroll-snap-type: x mandatory; /* Activa el "imán" */
+        flex-wrap: nowrap; 
+        overflow-x: auto; 
+        scroll-snap-type: x mandatory; 
         gap: 20px;
-        padding-bottom: 20px; /* Espacio para que no se corte la sombra si tienen */
-        
-        /* Oculta la barra de scroll para que se vea como app nativa */
+        padding-bottom: 20px; 
         scrollbar-width: none; 
     }
     
@@ -783,13 +781,11 @@ MENÚ DE NAVEGACIÓN HAMBURGUESA
         display: none;
     }
 
-    /* 2. TAMAÑO DE LAS TARJETAS EN TABLETS (992px y 768px) */
+    /* 2. LAS TARJETAS (Sin usar IDs) */
     .tarjeta-servicio {
-        flex: 0 0 45%; /* Ocupan un poco menos de la mitad */
-        scroll-snap-align: center; /* Se centran al soltar el scroll */
-        /* Eliminamos los width: 100% que tenías por ahí */
+        flex: 0 0 45%; 
+        scroll-snap-align: center; 
     }
-
 
     #desarrollo_web,
     #Diseño_UX-UI,
@@ -938,9 +934,8 @@ MENÚ DE NAVEGACIÓN HAMBURGUESA
         box-sizing: border-box;
     }
 
-    .contenedor_servicios{
-        display: flex;
-        flex-direction: row;
+   .tarjeta-servicio {
+        flex: 0 0 55%; 
     }
 
     #desarrollo_web,
@@ -1014,7 +1009,7 @@ MENÚ DE NAVEGACIÓN HAMBURGUESA
         height: 90px;
         object-fit: cover;
     }
-
+}
 
 
     /* =========================================
@@ -1022,47 +1017,21 @@ MENÚ DE NAVEGACIÓN HAMBURGUESA
    ========================================= */
     @media (max-width: 480px) {
 
-        /* Reducimos los espacios enormes de relleno (padding) */
-        #hero {
-            padding: 50px 20px;
-        }
+       #hero { padding: 50px 20px; }
+    #Servicio { padding: 40px 15px; }
+    #Portafolio { padding: 60px 15px; }
+    #Contactanos { padding: 50px 15px; }
 
-        #Servicio {
-            padding: 40px 15px;
-        }
+    .hero_title { font-size: 40px; }
+    .serve_title { font-size: 35px; }
+    .title_portafolio { font-size: 35px; }
 
-        #Portafolio {
-            padding: 60px 15px;
-        }
-
-        #Contactanos {
-            padding: 50px 15px;
-        }
+    /* AQUI LA MAGIA MÓVIL: Una sola tarjeta que deja asomar a la siguiente */
+    .tarjeta-servicio {
+        flex: 0 0 85%; 
     }
 
-    /* Títulos más pequeños para celular */
-    .hero_title {
-        font-size: 40px;
-    }
-
-    .serve_title {
-        font-size: 35px;
-    }
-
-    .title_portafolio {
-        font-size: 35px;
-    }
-
-    /* AQUI LA MAGIA: Todas las cajas pasan a 1 sola columna ocupando el 100% */
-    #desarrollo_web,
-    #Diseño_UX-UI,
-    #Diseño_de_Juegos,
-    #Desarrollo_Movil,
-    #Optmizacion_SEO,
-    #Mantenimiento_Soporte {
-        width: 100%;
-    }
-
+    .game, .app, .page_web { width: 100%; }
     /* Las imágenes del portafolio al 100% */
 
 
