@@ -189,12 +189,11 @@ a:hover {
     font-size: 30px;
 }
 
-.contenedor_servicios {
+.slider-container {
     display: flex;
-    flex-direction: row;
-    gap: 30px;
-    padding: 15px;
-    margin-left: 200px;
+    flex-wrap: wrap;
+    gap: 25px;  
+    padding: 20px;
 }
 
 
@@ -202,7 +201,7 @@ a:hover {
 #desarrollo_web {
     background-color: rgba(255, 255, 255, 0.08);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    width: 400px;
+    width: 500px;
     height: 250px;
     padding: 15px;
     border-radius: 15px;
@@ -211,7 +210,7 @@ a:hover {
 #Diseño_UX-UI {
     background-color: rgba(255, 255, 255, 0.08);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    width: 400px;
+    width: 500px;
     height: 250px;
     padding: 15px;
     border-radius: 15px;
@@ -220,7 +219,7 @@ a:hover {
 #Diseño_de_Juegos {
     background-color: rgba(255, 255, 255, 0.08);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    width: 400px;
+    width: 500px;
     height: 250px;
     padding: 15px;
     border-radius: 15px;
@@ -229,7 +228,7 @@ a:hover {
 #Desarrollo_Movil {
     background-color: rgba(255, 255, 255, 0.08);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    width: 400px;
+    width: 500px;
     height: 250px;
     padding: 15px;
     border-radius: 15px;
@@ -238,7 +237,7 @@ a:hover {
 #Optmizacion_SEO {
     background-color: rgba(255, 255, 255, 0.08);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    width: 400px;
+    width: 500px;
     height: 250px;
     padding: 15px;
     border-radius: 15px;
@@ -247,7 +246,7 @@ a:hover {
 #Mantenimiento_Soporte {
     background-color: rgba(255, 255, 255, 0.08);
     border: 1px solid rgba(255, 255, 255, 0.148);
-    width: 400px;
+    width: 500px;
     height: 250px;
     padding: 15px;
     border-radius: 15px;
@@ -564,6 +563,9 @@ p {
     font-size: 30px;
 }
 
+/*=============================
+RANGO DE 1400PX
+===============================*/
 @media (max-width: 1400px) {
     header {
         position: sticky;
@@ -593,7 +595,7 @@ p {
 
 /*
 ============
-RANGO DE  1400PX
+RANGO DE  1900PX
 ==============
 */
 
@@ -609,7 +611,7 @@ RANGO DE  1400PX
 
 /*
 ==========================
-RANGO DE LAPTOPS (Max 1200px)
+(Max 1200px)
 ==========================
 */
 @media (max-width: 1200px) {
@@ -637,8 +639,7 @@ RANGO DE LAPTOPS (Max 1200px)
 
     .contenedor_servicios {
         margin-left: 0;
-        justify-content: center;
-        flex-wrap: wrap;
+        
     }
 
     .title_portafolio {
@@ -675,10 +676,13 @@ RANGO DE LAPTOPS (Max 1200px)
 }
 
 /*============
-992px
+ RANGO DE 992px
 ===============*/
 @media (max-width: 992px) {
 
+/*=========================
+MENÚ DE NAVEGACIÓN HAMBURGUESA
+/*=========================
     /* 1. Hacemos aparecer la hamburguesa */
     .hamburguesa {
         display: flex;
@@ -719,6 +723,9 @@ RANGO DE LAPTOPS (Max 1200px)
         /* Desaparece la barra del medio */
     }
 
+    /*===========================
+    ============================*/
+
     h2 {
         font-size: 35px;
     }
@@ -751,15 +758,42 @@ RANGO DE LAPTOPS (Max 1200px)
         box-sizing: border-box;
     }
 
+    /* 1. ESTA ES TU NUEVA PISTA DEL CARRUSEL */
+    .slider-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap; /* Evita que bajen a la siguiente línea */
+        overflow-x: auto; /* Activa el scroll horizontal */
+        scroll-snap-type: x mandatory; /* Activa el "imán" */
+        gap: 20px;
+        padding-bottom: 20px; /* Espacio para que no se corte la sombra si tienen */
+        
+        /* Oculta la barra de scroll para que se vea como app nativa */
+        scrollbar-width: none; 
+    }
+    
+    .slider-container::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* 2. TAMAÑO DE LAS TARJETAS EN TABLETS (992px y 768px) */
+    .tarjeta-servicio {
+        flex: 0 0 45%; /* Ocupan un poco menos de la mitad */
+        scroll-snap-align: center; /* Se centran al soltar el scroll */
+        /* Eliminamos los width: 100% que tenías por ahí */
+    }
+
+
     #desarrollo_web,
     #Diseño_UX-UI,
     #Diseño_de_Juegos,
     #Desarrollo_Movil,
     #Optmizacion_SEO,
     #Mantenimiento_Soporte {
-        width: 45%;
+        width: 90%;
         height: auto;
     }
+
 
 
     .footer,
@@ -838,8 +872,7 @@ RANGO DE LAPTOPS (Max 1200px)
     /* 2. Transformamos la lista de enlaces en un panel lateral oculto */
     .enlaces {
         position: fixed;
-        top: 12%;
-        right: -100%;
+        top: 10%;
         /* Lo escondemos fuera de la pantalla a la derecha */
         width: 30%;
         /* Le damos un ancho decente para el celular */
@@ -896,6 +929,11 @@ RANGO DE LAPTOPS (Max 1200px)
     textarea {
         width: 100%;
         box-sizing: border-box;
+    }
+
+    .contenedor_servicios{
+        display: flex;
+        flex-direction: row;
     }
 
     #desarrollo_web,
