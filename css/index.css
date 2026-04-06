@@ -563,6 +563,23 @@ p {
     font-size: 30px;
 }
 
+
+/*
+============
+RANGO DE  1900PX
+==============
+*/
+
+@media (max-width: 1900px) {
+
+    .Formulario {
+        margin-left: 60%;
+        margin-right: 70%;
+        margin-top: -400px;
+    }
+
+}
+
 /*=============================
 RANGO DE 1400PX
 ===============================*/
@@ -591,22 +608,6 @@ RANGO DE 1400PX
         margin-right: auto;
         margin-top: 50px;
     }
-}
-
-/*
-============
-RANGO DE  1900PX
-==============
-*/
-
-@media (max-width: 1900px) {
-
-    .Formulario {
-        margin-left: 60%;
-        margin-right: 70%;
-        margin-top: -400px;
-    }
-
 }
 
 /*
@@ -673,6 +674,12 @@ RANGO DE  1900PX
         margin-right: auto;
         margin-top: 50px;
     }
+    .slider-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;  
+    padding: 20px;
+}
 }
 
 /*============
